@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## BST260 Final Project: House price Prediction
 
 You can use the [editor on GitHub](https://github.com/jiajingchen/bst260final-project-house-price/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
