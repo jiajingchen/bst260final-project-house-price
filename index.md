@@ -4,7 +4,7 @@ team members:
 Kang Jian
 Chi Zhang
 Hanyu Jiang
-Jiajing Chen
+Jiajing Chen  
 
 ##Overview and Motivation
 
