@@ -1,6 +1,10 @@
 # BST260 Final Project: House Price Prediction
 
-
+team members:
+Kang Jian
+Chi Zhang
+Hanyu Jiang
+Jiajing Chen
 
 ##Overview and Motivation
 
@@ -29,8 +33,9 @@ Through this project, we sought to answer some major questions:
 
 
 ##Exploratory Analysis
-# correlation
-# trend
+- correlation
+- trends
+- pca
 
 ## Final Analysis
 
