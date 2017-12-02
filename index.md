@@ -1,19 +1,43 @@
-## BST260 Final Project: House price Prediction
+# BST260 Final Project: House Price Prediction
 
-You can use the [editor on GitHub](https://github.com/jiajingchen/bst260final-project-house-price/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+##Overview and Motivation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Growing unaffordability of housing has become one of the major challenges for metropolitan cities around the world. In order to gain a better understanding of the commercialized housing market we are currently facing, we want to figure out what are the top influential factors of the housing price. Apart from the more obvious driving forces such as the inflation and the scarcity of land, there are also a number of variables that are worth looking into. Therefore, we choose to study the house prices predicting problem on Kaggle, which enables us to dig into the variables in depth and to provide a model that could more accurately estimate home prices. In this way, people could make better decisions when it comes to home investment.
 
-```markdown
-Syntax highlighted code block
+Our object is to discuss the major factors that affect housing price and make precise predictions for it. We use 79 explanatory variables including almost every aspect of residential homes in Ames, Iowa. Methods of both statistical regression models and machine learning regression models are applied and further compared according to their performance to better estimate the final price of each house. The model provides price prediction based on similar comparables of people’s dream houses, which allows both buyers and sellers to better negotiate home prices according to market trend. 
 
-# Header 1
-## Header 2
-### Header 3
+
+##Related Work
+
+- Stepwise
+- PCA
+- Random Forest
+- Gradient Boosting
+- (Ensemble Learning)
+- Some kernal in Kaggle
+
+
+##Initial Questions
+Through this project, we sought to answer some major questions: 
+1.
+2.
+3.
+
+##Data: Source, scraping method, cleanup, etc.
+
+
+##Exploratory Analysis
+# correlation
+# trend
+
+## Final Analysis
+
+
+
+
+
 
 - Bulleted
 - List
@@ -31,7 +55,3 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 ### Jekyll Themes
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jiajingchen/bst260final-project-house-price/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
