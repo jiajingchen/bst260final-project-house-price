@@ -90,7 +90,11 @@ Of all numeric variables, Variables strongly correlated with hourse price (SaleP
  
 - Stepwise selections
 
-- pca
+- Principal component analysis
+
+Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components [1].
+As mentioned in class, we can’t estimate the estimators of a high-dimensional nonlinear model via lm function. So we applied PCA to estimate predictors by minimizing  the squared error of the approximation.
+
 
 
 - etc
@@ -99,6 +103,23 @@ Of all numeric variables, Variables strongly correlated with hourse price (SaleP
 
 
 # Machine Learning
+- XGBoost
+
+![](xgboots.png)
+
+- Random Forest
+
+![](rf.png)
+- Regression Tree 
+
+The regression tree is a good friend to help us decide which features matter when buying houses. Here is am example of regression tree:
+![](tree.png)
+
+
+To our surprise, the overall quality of the house is more important than the total square feet. 
+The year when the house was built or remodeled also plays an important role in pricing. This coincide with our intuition since the year is related to the quality.
+
+- Ensemble Methods
 
 # Final Analysis
 
