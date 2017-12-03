@@ -7,7 +7,7 @@ Hanyu Jiang,
 Jiajing Chen  
 
 ![](1.jpg)
-(Data provided by [Redfin](https://www.redfin.com/), a national real estate brokerage.)
+(Data provided by [Redfin](https://www.redfin.com/), a national real estate brokerage)
 
 # Overview and Motivation
 
