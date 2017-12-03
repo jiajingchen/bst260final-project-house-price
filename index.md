@@ -7,6 +7,7 @@ Hanyu Jiang
 Jiajing Chen  
 
 ![](1.jpg)
+
 # Overview and Motivation
 
 Growing unaffordability of housing has become one of the major challenges for metropolitan cities around the world. In order to gain a better understanding of the commercialized housing market we are currently facing, we want to figure out what are the top influential factors of the housing price. Apart from the more obvious driving forces such as the inflation and the scarcity of land, there are also a number of variables that are worth looking into. Therefore, we choose to study the house prices predicting problem on Kaggle, which enables us to dig into the variables in depth and to provide a model that could more accurately estimate home prices. In this way, people could make better decisions when it comes to home investment.
@@ -36,7 +37,9 @@ Through this project, we sought to answer some major questions:
 # Exploratory Analysis
 - correlation
 ![](cor.png)
-- trends
+- Strongly related
+![](vk.png)
+![](v1.png)
 - pca
 
 # Final Analysis
