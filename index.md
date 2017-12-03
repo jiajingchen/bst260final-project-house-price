@@ -40,6 +40,7 @@ Our predictions are evaluated on Root-Mean-Squared-Error (RMSE) between the loga
 # Data: Source, scraping method, cleanup, etc.
 
 - Source
+
 Our data was obtained from [Ames Housing dataset](https://ww2.amstat.org/publications/jse/v19n3/decock.pdf), which was compiled by Dean De Cock for use in data science education. It's an incredible alternative for data scientists looking for a modernized and expanded version of the often cited Boston Housing dataset. 
 
 We also participated in the Kaggle Competition [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) 
@@ -48,8 +49,21 @@ The data includes 79 explanatory variables describing (almost) every aspect of r
 
 - Data Cleaning
 
+1. Missing Data and Different Data Types
+
+When using the data, be careful about the following variables:
+
+Ordinal feature: ExterCond, ExterQual, Fence, FireplaceQu, Functional, GarageFinish, GarageQual, HeatingQC, KitchenQual, OverallCond, OverallQual, BsmtCond, BsmtQual, BsmtExposure, BsmtFinType1, BsmtFinType2, GarageCond, PavedDrive
+
+Read as numerial but actually is categorical: MoSold, MSSubClass
+
+2. filling NAs and scale the data
+
+
+
 # Exploratory Analysis
 - Correlations
+
 Here we examined the correlations between variables and correlations with our outcome of interest: SalePrice.
 
 correlations between variables:
@@ -77,6 +91,8 @@ Of all numeric variables, Variables strongly correlated with hourse price (SaleP
 - Stepwise selections
 
 - pca
+
+
 - etc
 
 # Feature Engineering
