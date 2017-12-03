@@ -39,6 +39,7 @@ Through this project, we sought to answer some major questions:
 ![](cor.png)
 - Strongly related
 ![](vk.png)
+
 ![](v1.png)
 - pca
 
