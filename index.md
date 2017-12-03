@@ -1,6 +1,6 @@
 # BST260 Final Project: House Price Prediction
 
-team members:
+
 Kang Jian,
 Chi Zhang,
 Hanyu Jiang,
@@ -49,9 +49,20 @@ The data includes 79 explanatory variables describing (almost) every aspect of r
 - Data Cleaning
 
 # Exploratory Analysis
-- correlation
+- Correlations
+Here we examined the correlations between variables and correlations with our outcome of interest: SalePrice.
+
+correlations between variables:
+
 ![](cor.png)
-- Strongly related
+Figure: Correlation visualization with R packages(corrplot, ggplot2)
+
+Correlations with SalePrice:
+Here we use the R package tabplots to find strong-related variables to "Saleprice" among 79 variables, which would further help us do feature selection and engineering. 
+
+Here are some of the plots generated with R package tabplots to show the number and range of values for each variable as well as the covariance among the variables:
+
+
 ![](vk.png)
 ![](v0.png)
 ![](v1.png)
@@ -60,7 +71,11 @@ The data includes 79 explanatory variables describing (almost) every aspect of r
 ![](v4.png)
 ![](v5.png)
 
-- stepwise
+Of all numeric variables, Variables strongly correlated with hourse price (SalePrice) are:
+ OverallQual, YearBuilt, YearRemodAdd, MasvnrArea, BsmtFinSF1, TotalBsmtSF, 1stFlrSF, GrLiveArea, FullBath, TotRmsAbvGrd, FirePlaces, GarageYrBlt, GarageCars, GarageArea, WoodDeskSF and OpenPorchSF
+ 
+- Stepwise selections
+
 - pca
 - etc
 
