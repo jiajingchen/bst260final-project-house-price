@@ -1,12 +1,13 @@
 # BST260 Final Project: House Price Prediction
 
 
-Kang Jian,
+Jian Kang,
 Chi Zhang,
 Hanyu Jiang,
 Jiajing Chen  
 
 ![](1.jpg)
+(Data provided by [Redfin](https://www.redfin.com/), a national real estate brokerage.)
 
 # Overview and Motivation
 
