@@ -1,9 +1,9 @@
 # BST260 Final Project: House Price Prediction
 
 team members:
-Kang Jian
-Chi Zhang
-Hanyu Jiang
+Kang Jian,
+Chi Zhang,
+Hanyu Jiang,
 Jiajing Chen  
 
 ![](1.jpg)
@@ -28,20 +28,46 @@ Our object is to discuss the major factors that affect housing price and make pr
 # Initial Questions
 Through this project, we sought to answer some major questions: 
 1.
-2.
-3.
+2. Our main goal 
+
+It is our job to predict the sales price for each house. For each Id in the test set, you must predict the value of the SalePrice variable. 
+
+3. How to evaluate our prediction performance?
+
+Our predictions are evaluated on Root-Mean-Squared-Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price.
+
 
 # Data: Source, scraping method, cleanup, etc.
 
+- Source
+Our data was obtained from [Ames Housing dataset](https://ww2.amstat.org/publications/jse/v19n3/decock.pdf), which was compiled by Dean De Cock for use in data science education. It's an incredible alternative for data scientists looking for a modernized and expanded version of the often cited Boston Housing dataset. 
+
+We also participated in the Kaggle Competition [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) 
+
+The data includes 79 explanatory variables describing (almost) every aspect of residential homes. 
+
+- Data Cleaning
 
 # Exploratory Analysis
 - correlation
 ![](cor.png)
 - Strongly related
 ![](vk.png)
-
+![](v0.png)
 ![](v1.png)
+![](v2.png)
+![](v3.png)
+![](v4.png)
+![](v5.png)
+
+- stepwise
 - pca
+- etc
+
+# Feature Engineering
+
+
+# Machine Learning
 
 # Final Analysis
 
