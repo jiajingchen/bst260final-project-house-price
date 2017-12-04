@@ -1,13 +1,8 @@
 ![](front.jpeg)
 # BST260 Final Project: House Price Prediction
 
-
-Jian Kang,
-Chi Zhang,
-Hanyu Jiang,
-Jiajing Chen  
-
-
+Our team:
+![](team.png)
 
 
 # Overview and Motivation
