@@ -38,7 +38,7 @@ It is our job to predict the sales price for each house. For each Id in the test
 Our predictions are evaluated on Root-Mean-Squared-Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price.
 
 
-# Data: Source, scraping method, cleanup, etc.
+# Data
 
 - Source
 
@@ -151,3 +151,10 @@ The year when the house was built or remodeled also plays an important role in p
 
 [Link](url) and ![Image](src)
 ```
+
+
+Reference and Source
+
+The Github page of our full project
+https://github.com/BST260-final-group-project
+
