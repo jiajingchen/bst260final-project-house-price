@@ -7,10 +7,14 @@ Chi Zhang,
 Hanyu Jiang,
 Jiajing Chen  
 
+
+
+
+# Overview and Motivation
+
 ![](1.jpg)
 (For this demo visualization, data was provided by [Redfin](https://www.redfin.com/), a national real estate brokerage)
 
-# Overview and Motivation
 
 Growing unaffordability of housing has become one of the major challenges for metropolitan cities around the world. In order to gain a better understanding of the commercialized housing market we are currently facing, we want to figure out what are the top influential factors of the housing price. Apart from the more obvious driving forces such as the inflation and the scarcity of land, there are also a number of variables that are worth looking into. Therefore, we choose to study the house prices predicting problem on Kaggle, which enables us to dig into the variables in depth and to provide a model that could more accurately estimate home prices. In this way, people could make better decisions when it comes to home investment.
 
@@ -89,6 +93,9 @@ Here are some of the plots generated with R package tabplots to show the number 
 
 Of all numeric variables, Variables strongly correlated with hourse price (SalePrice) are:
  OverallQual, YearBuilt, YearRemodAdd, MasvnrArea, BsmtFinSF1, TotalBsmtSF, 1stFlrSF, GrLiveArea, FullBath, TotRmsAbvGrd, FirePlaces, GarageYrBlt, GarageCars, GarageArea, WoodDeskSF and OpenPorchSF
+Which is consistent with our findings in the head map below:
+![](corr.png)
+ 
  
 - Stepwise selections
 
@@ -113,6 +120,8 @@ As mentioned in class, we can’t estimate the estimators of a high-dimensional 
 ![](xgboots.png)
 
 - Random Forest
+
+![](randomf.png)
 
 ![](rf.png)
 - Regression Tree 
