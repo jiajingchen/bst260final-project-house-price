@@ -4,6 +4,8 @@
 Our team:
 ![](team.png)
 
+# Our Video
+[![Watch the video on YouTube](http://img.youtube.com/vi/cK9vh489Di8/1.jpg)](https://www.youtube.com/watch?v=cK9vh489Di8&feature=youtu.be)
 
 # Overview and Motivation
 
