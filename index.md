@@ -1,11 +1,13 @@
 ![](front.jpeg)
 # BST260 Final Project: House Price Prediction
 
-Our team:
+# Our Team
+
 ![](team.png)
 
-# Our Video
+# Watch Our Video on YouTube!
 [![Watch the video on YouTube](http://img.youtube.com/vi/cK9vh489Di8/1.jpg)](https://www.youtube.com/watch?v=cK9vh489Di8&feature=youtu.be)
+
 
 # Overview and Motivation
 
@@ -32,25 +34,29 @@ Our object is to discuss the major factors that affect housing price and make pr
 
 # Initial Questions
 Through this project, we sought to answer some major questions: 
-1.
-2. Our main goal 
 
-It is our job to predict the sales price for each house. For each Id in the test set, you must predict the value of the SalePrice variable. 
+1. What are the important features that affect the house price?
+
+2. How to build a model to predict the house price? 
 
 3. How to evaluate our prediction performance?
 
-Our predictions are evaluated on Root-Mean-Squared-Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price.
+
+
+It is our job to predict the sales price for each house. For each Id in the test set, we must predict the value of the SalePrice variable. 
+
+The metric to evaluate the models is Root-Mean-Square-Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price. Our predictions are evaluated on Root-Mean-Squared-Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price.
 
 
 # Data
 
 - Source
 
-Our data was obtained from [Ames Housing dataset](https://ww2.amstat.org/publications/jse/v19n3/decock.pdf), which was compiled by Dean De Cock for use in data science education. It's an incredible alternative for data scientists looking for a modernized and expanded version of the often cited Boston Housing dataset. 
+Our data was obtained from [Ames Housing dataset](https://ww2.amstat.org/publications/jse/v19n3/decock.pdf), which was compiled by Dean De Cock for use in data science education. It's an incredible alternative for data scientists looking for a modernized and expanded version of the often cited Boston Housing dataset. The data includes 79 explanatory variables describing (almost) every aspect of residential homes. 
 
 We also participated in the Kaggle Competition [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) 
+Our best entry for the competition is 
 
-The data includes 79 explanatory variables describing (almost) every aspect of residential homes. 
 
 - Data Cleaning
 
@@ -98,6 +104,12 @@ Which is consistent with our findings in the head map below:
  
 - Stepwise selections
 
+Stepwise Selection combines elements of both forward selection and backward elimination, allow us either to remove covariates from our previous model or add back in covariates that we had previously eliminated from our model, and in this sense, giving us chances to consider all possible subsets of the pool of explanatory variables and find the model that best fits the data according to some prespecified criterion, such as AIC(Akaike Information Criterion), BIC(Bayesian Information Criterion), and adjusted R square.
+
+- Lowess Anlaysis
+
+LOWESS (Locally Weighted Scatterplot Smoothing), or LOESS (Locally Weighted Smoothing), is often applied in regression analysis that creates a smooth line through a scatter plot. It is especially helpful when detecting nonlinear relationship between variables and predicting trends. In our study, LOWESS was first used to detect potential nonlinear associations between variables and sale prices. Since it performed the best results compared to other smoothing methods, we then used it to predict prices after PCA preprocessing.
+
 - Principal component analysis
 
 Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components [1].
@@ -106,19 +118,17 @@ Principal component analysis (PCA) is a statistical procedure that uses an ortho
 
 As mentioned in class, we can’t estimate the estimators of a high-dimensional nonlinear model via lm function. So we applied PCA to estimate predictors by minimizing  the squared error of the approximation.
 
+- Lasso Regression
 
+Lasso (Least Absolute Shrinkage and Selection Operator) regression is a regularized linear regression. It uses L1 norm to constrain the coefficients of the fitting model. Usually, some coefficients will be set to 0 under the constrain. Therefore, the lasso regression is more robust compared to ordinary linear regression.
 
-- etc
-
-# Feature Engineering
-
+![](lasso.png)
 
 # Machine Learning
-- XGBoost
-
-![](xgboots.png)
 
 - Random Forest
+
+Random forest is an ensembling machine learning method basing on classification tree or regression tree. In general, random forest will generate many decision trees and average their predictions to make the final prediction. When generating each decision tree, the random forest will use a subset of all features, which avoids the overfitting problem.
 
 ![](randomf.png)
 
@@ -132,11 +142,18 @@ The regression tree is a good friend to help us decide which features matter whe
 To our surprise, the overall quality of the house is more important than the total square feet. 
 The year when the house was built or remodeled also plays an important role in pricing. This coincide with our intuition since the year is related to the quality.
 
-- Lasso Regression
 
-![](lasso.png)
+- Gradient Boosting
+
+Similar to random forest, gradient boosting is another ensembling machine learning method basing on classification tree or regression tree. While in random forest every tree is weighted the same, every tree in gradient boosting tries to minimize the error between target and trees built previously. Gradient boosting is now a popular machine learning framework for both academia and industry.
+![](xgboots.png)
+
 
 - Ensemble Methods
+
+Ensemble learning combines multiple statistical and machine learning algorithms together to achieve better predictive performance than any algorithm alone, because the errors in each model may cancel out in the ensembled model. In our project, we will try to ensemble the regression techniques we use (e.g. lasso regression, gradient boosting), to predict the sale prices and compare the ensembled model with other models.
+
+In our project, we just simply stack several models, i.e. average their predictions to make our final prediction.
 
 # Final Analysis
 
@@ -145,20 +162,10 @@ The year when the house was built or remodeled also plays an important role in p
 
 
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-
-Reference and Source
-
-The Github page of our full project
+# Reference and Source
+- The Source of Data
+- The Github page of our full project
 https://github.com/BST260-final-group-project
+
 
