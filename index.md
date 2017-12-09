@@ -58,7 +58,55 @@ We also participated in the Kaggle Competition [House Prices: Advanced Regressio
 Our best entry for the competition is 
 
 
-- Data Cleaning
+
+
+# Exploratory Data Analysis
+
+Firstly, we do some EDAs to gain a general understanding of our data.
+
+- Some important matrices and trends
+ 
+SalesPrice vs. Living Area 
+![](eda1.png)
+
+From the plot above we can see that there are two outliers which has high areas but low sale price. When fitting the models, we delete these two outliers in the training data.
+
+![](eda2.png)
+
+![](eda3.png)
+
+![](eda4.png)
+
+
+- Correlation Matrix
+
+Here we examined the correlations between variables and correlations with our outcome of interest: SalePrice.
+
+correlations between variables:
+
+![](cor.png)
+Figure: Correlation visualization with R packages(corrplot, ggplot2)
+
+Correlations with SalePrice:
+Here we use the R package tabplots to find strong-related variables to "Saleprice" among 79 variables, which would further help us do feature selection and engineering. 
+
+Here are some of the plots we generated with R package tabplots to show the number and range of values for each variable as well as the covariance among the variables:
+
+
+![](vk.png)
+![](v0.png)
+
+![](v2.png)
+![](v3.png)
+
+Of all numeric variables, Variables strongly correlated with hourse price (SalePrice) are:
+ OverallQual, YearBuilt, YearRemodAdd, MasvnrArea, BsmtFinSF1, TotalBsmtSF, 1stFlrSF, GrLiveArea, FullBath, TotRmsAbvGrd, FirePlaces, GarageYrBlt, GarageCars, GarageArea, WoodDeskSF and OpenPorchSF
+Which is consistent with our findings in the head map below:
+![](corr.png)
+ 
+# Data Cleaning
+ 
+Before we rush into regression and machine learning prediction, it is very important to get our data "cleaned" enough. This process usually take 80% of time in a real-world data problem. In fact, in our project, we spend about 60% of our time cleaning the data ourselves! 
 
 1. Missing Data and Different Data Types
 
@@ -71,44 +119,15 @@ Read as numerial but actually is categorical: MoSold, MSSubClass
 2. filling NAs and scale the data
 
 
-
-# Exploratory Analysis
-- Correlations
-
-Here we examined the correlations between variables and correlations with our outcome of interest: SalePrice.
-
-correlations between variables:
-
-![](cor.png)
-Figure: Correlation visualization with R packages(corrplot, ggplot2)
-
-Correlations with SalePrice:
-Here we use the R package tabplots to find strong-related variables to "Saleprice" among 79 variables, which would further help us do feature selection and engineering. 
-
-Here are some of the plots generated with R package tabplots to show the number and range of values for each variable as well as the covariance among the variables:
-
-
-![](vk.png)
-![](v0.png)
-![](v1.png)
-![](v2.png)
-![](v3.png)
-![](v4.png)
-![](v5.png)
-
-Of all numeric variables, Variables strongly correlated with hourse price (SalePrice) are:
- OverallQual, YearBuilt, YearRemodAdd, MasvnrArea, BsmtFinSF1, TotalBsmtSF, 1stFlrSF, GrLiveArea, FullBath, TotRmsAbvGrd, FirePlaces, GarageYrBlt, GarageCars, GarageArea, WoodDeskSF and OpenPorchSF
-Which is consistent with our findings in the head map below:
-![](corr.png)
  
  
 - Stepwise selections
 
-Stepwise Selection combines elements of both forward selection and backward elimination, allow us either to remove covariates from our previous model or add back in covariates that we had previously eliminated from our model, and in this sense, giving us chances to consider all possible subsets of the pool of explanatory variables and find the model that best fits the data according to some prespecified criterion, such as AIC(Akaike Information Criterion), BIC(Bayesian Information Criterion), and adjusted R square.
+Stepwise Selection combines elements of both forward selection and backward elimination, allow us either to remove covariates from our previous model or add back in covariates that we had previously eliminated from our model, and in this sense, giving us chances to consider all possible subsets of the pool of explanatory variables and find the model that best fits the data according to some prespecified criterion, such as AIC(Akaike Information Criterion), BIC(Bayesian Information Criterion), and adjusted R square.[]
 
 - Lowess Anlaysis
 
-LOWESS (Locally Weighted Scatterplot Smoothing), or LOESS (Locally Weighted Smoothing), is often applied in regression analysis that creates a smooth line through a scatter plot. It is especially helpful when detecting nonlinear relationship between variables and predicting trends. In our study, LOWESS was first used to detect potential nonlinear associations between variables and sale prices. Since it performed the best results compared to other smoothing methods, we then used it to predict prices after PCA preprocessing.
+LOWESS (Locally Weighted Scatterplot Smoothing), or LOESS (Locally Weighted Smoothing), is often applied in regression analysis that creates a smooth line through a scatter plot. It is especially helpful when detecting nonlinear relationship between variables and predicting trends. In our study, LOWESS was first used to detect potential nonlinear associations between variables and sale prices. Since it performed the best results compared to other smoothing methods, we then used it to predict prices after PCA preprocessing.[]
 
 - Principal component analysis
 
@@ -168,4 +187,9 @@ In our project, we just simply stack several models, i.e. average their predicti
 - The Github page of our full project
 https://github.com/BST260-final-group-project
 
+- Reference 
+[]
+[]
+[]
+[]
 
