@@ -55,7 +55,9 @@ The metric to evaluate the models is Root-Mean-Square-Error (RMSE) between the l
 Our data was obtained from [Ames Housing dataset](https://ww2.amstat.org/publications/jse/v19n3/decock.pdf), which was compiled by Dean De Cock for use in data science education. It's an incredible alternative for data scientists looking for a modernized and expanded version of the often cited Boston Housing dataset. The data includes 79 explanatory variables describing (almost) every aspect of residential homes. 
 
 We also participated in the Kaggle Competition [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) 
-Our best entry for the competition is 
+Our best entry for the competition is 0.1169, which leads us to 358/2636 (top 15%) in the leaderboard.
+
+![](kaggle.png)
 
 
 
@@ -73,9 +75,14 @@ From the plot above we can see that there are two outliers which has high areas 
 
 ![](eda2.png)
 
+Conincided with our intuition, if the overall quality of the house is better, then the house price is higher.
+
+
 ![](eda3.png)
 
 ![](eda4.png)
+
+In general, the newer the house is, the higher the price is. But the correlation is not very strong.
 
 
 - Correlation Matrix
@@ -176,10 +183,29 @@ In our project, we just simply stack several models, i.e. average their predicti
 
 # Final Analysis
 
+Our goal is to minimize the RMSE after log transformation, so when training the model, the target value is the logarithm of the observed sales price. Besides, we add one more feature - total square feet “TotalSF”, which is defined as TotalSF = TotalBsmtSF + 1stFlrSF + 2ndFlrSF.
+
+Some models (e.g. linear models) perform better when the predictors are “normal”. Therefore we use Box-Cox transformation to transform the features of which skewness is high. 
 
 
 
+- Basic Models
 
+
+We use 5-fold cross validation to evaluate how each model performs. Each model’s RMSEs in cross validation (CV) and in leaderboard (LB) are as follows:
+
+![](table.png)
+
+Alough lasso performs best in cross validation, but gradient boosting model provided by sk-learn is better in leader board. We think that it comes from the overfitting problem of lasso regression. In both cross validation and leaderboard, the random forest does not perform well. In this test, random forest avoid the problem of overfitting, but it underfits the data at the same time. The “PCA + LOESS” model performs worst, since LOESS model is not a good model for complex regression problem.
+
+
+- Ensemble Method (Stacking)
+
+Based on the above result, we choose two models - lasso and gradient boosting in sklearn, and average their predictions to make our final prediction. The RMSE of the stacking model is 0.1169, which leads us to 358/2636 (top 15%) in the leaderboard.
+
+![](kaggle.png)
+
+Code can be found on: https://github.com/BST260-final-group-project/project-files/tree/master/final-analysis
 
 
 # Reference and Source
@@ -187,9 +213,5 @@ In our project, we just simply stack several models, i.e. average their predicti
 - The Github page of our full project
 https://github.com/BST260-final-group-project
 
-- Reference 
-[]
-[]
-[]
-[]
+
 
