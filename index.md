@@ -135,7 +135,7 @@ Which is consistent with our findings in the head map below:
  
 Before we rush into regression and machine learning prediction, it is very important to get our data "cleaned" enough. This process usually take 80% of time in a real-world data problem. In fact, in our project, we spend about 60% of our time cleaning the data ourselves! 
 
-## Missing Data and Different Data Types
+- Missing Data and Different Data Types
 
 When using the data, we must be careful about the following variables:
 
@@ -143,7 +143,7 @@ Ordinal feature: ExterCond, ExterQual, Fence, FireplaceQu, Functional, GarageFin
 
 Read as numerial but actually is categorical: MoSold, MSSubClass
 
-## Filling NAs and scale the data
+- Filling NAs and scale the data
 
 There are, indeed, a lot of NAs in our oringinal dataset, which we need to clean the dataset and fill in the NA with appropriate value to make our prediction. Then, we try to fill the NAs by using their properties according to the value in those columns.
 
@@ -175,7 +175,7 @@ Finally, we use one-hot method to deal with categorical features excluding ordin
 
  
  
-## Model Selections
+- Model Selections
 
 Stepwise Selection combines elements of both forward selection and backward elimination, allow us either to remove covariates from our previous model or add back in covariates that we had previously eliminated from our model, and in this sense, giving us chances to consider all possible subsets of the pool of explanatory variables and find the model that best fits the data according to some prespecified criterion, such as AIC(Akaike Information Criterion), BIC(Bayesian Information Criterion), and adjusted R square.[]
 
@@ -183,7 +183,7 @@ Stepwise Selection combines elements of both forward selection and backward elim
 
 LOWESS (Locally Weighted Scatterplot Smoothing), or LOESS (Locally Weighted Smoothing), is often applied in regression analysis that creates a smooth line through a scatter plot. It is especially helpful when detecting nonlinear relationship between variables and predicting trends. In our study, LOWESS was first used to detect potential nonlinear associations between variables and sale prices. Since it performed the best results compared to other smoothing methods, we then used it to predict prices after PCA preprocessing.
 
-## Principal component analysis
+- Principal component analysis
 
 Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components.
 
@@ -194,7 +194,7 @@ We also run PCA on our data sets. PC1 and PC2 represent 1st principal component 
 As mentioned in class, we can’t estimate the estimators of a high-dimensional nonlinear model via lm function. So we applied PCA to estimate predictors by minimizing the squared error of the approximation.
 
 
-## Lasso Regression
+- Lasso Regression
 
 Lasso (Least Absolute Shrinkage and Selection Operator) regression is a regularized linear regression. It uses L1 norm to constrain the coefficients of the fitting model. Usually, some coefficients will be set to 0 under the constrain. Therefore, the lasso regression is more robust compared to ordinary linear regression.
 
@@ -202,14 +202,14 @@ Lasso (Least Absolute Shrinkage and Selection Operator) regression is a regulari
 
 # Machine Learning
 
-## Random Forest
+- Random Forest
 
 Random forest is an ensembling machine learning method basing on classification tree or regression tree. In general, random forest will generate many decision trees and average their predictions to make the final prediction. When generating each decision tree, the random forest will use a subset of all features, which avoids the overfitting problem.
 
 ![](randomf.png)
 
 ![](rf.png)
-## Regression Tree 
+- Regression Tree 
 
 The regression tree is a good friend to help us decide which features matter when buying houses. Here is am example of regression tree:
 ![](tree.png)
@@ -219,13 +219,13 @@ To our surprise, the overall quality of the house is more important than the tot
 The year when the house was built or remodeled also plays an important role in pricing. This coincide with our intuition since the year is related to the quality.
 
 
-## Gradient Boosting
+- Gradient Boosting
 
 Similar to random forest, gradient boosting is another ensembling machine learning method basing on classification tree or regression tree. While in random forest every tree is weighted the same, every tree in gradient boosting tries to minimize the error between target and trees built previously. Gradient boosting is now a popular machine learning framework for both academia and industry.
 ![](xgboots.png)
 
 
-## Ensemble Methods
+- Ensemble Methods
 
 Ensemble learning combines multiple statistical and machine learning algorithms together to achieve better predictive performance than any algorithm alone, because the errors in each model may cancel out in the ensembled model. In our project, we will try to ensemble the regression techniques we use (e.g. lasso regression, gradient boosting), to predict the sale prices and compare the ensembled model with other models.
 
@@ -237,13 +237,13 @@ Our goal is to minimize the RMSE after log transformation, so when training the 
 
 Some models (e.g. linear models) perform better when the predictors are “normal”. Therefore we use Box-Cox transformation to transform the features of which skewness is high. 
 
-## Some Important Matrices
+- Some Important Matrices
 
 In our model, we can easily find that housing price realted a lot of factors, some of these factors are listed in the circle above. To be specific, overall quality increase 1, the house price would increase 8762, and when GrLiveArea(Above grade (ground) living area square feet) increase 1, the housing price would increase a lot, which can be 58249; on the other hand, when the house near the rail road, the housing price will decrease 11403, these all meet our intuitive knowledge. We have a little visualization of those important matrices as follows:
 
 ![](ball.png)
 
-## Model Evaluations
+- Model Evaluations
 
 
 We use 5-fold cross validation to evaluate how each model performs. Each model’s RMSEs in cross validation (CV) and in leaderboard (LB) are as follows:
@@ -253,7 +253,7 @@ We use 5-fold cross validation to evaluate how each model performs. Each model�
 Alough lasso performs best in cross validation, but gradient boosting model provided by sk-learn is better in leader board. We think that it comes from the overfitting problem of lasso regression. In both cross validation and leaderboard, the random forest does not perform well. In this test, random forest avoid the problem of overfitting, but it underfits the data at the same time. The “PCA + LOESS” model performs worst, since LOESS model is not a good model for complex regression problem.
 
 
-## Ensemble Methods and Kaggle
+- Ensemble Methods and Kaggle
 
 Based on the above result, we choose two models - lasso and gradient boosting in sklearn, and average their predictions to make our final prediction. The RMSE of the stacking model is 0.1169, which leads us to 367/2636 (top 15%) in the leaderboard.
 
