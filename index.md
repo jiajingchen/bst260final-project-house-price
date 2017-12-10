@@ -12,6 +12,7 @@
 # Overview and Motivation
 
 ![](1.jpg)
+
 (For this demo visualization, data was provided by [Redfin](https://www.redfin.com/), a national real estate brokerage)
 
 
