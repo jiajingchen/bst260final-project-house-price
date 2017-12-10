@@ -1,5 +1,6 @@
-![](front.jpeg)
 # BST260 Final Project: House Price Prediction
+
+![](front.jpeg)
 
 # Our Team
 
@@ -26,14 +27,23 @@ Our object is to discuss the major factors that affect housing price and make pr
 # Related Work
 
 Here is an outline of our related work for the project.
+
 - Exploratory Data Analysis
+
 - Data wrangling and cleaning
+
 - Regression, Stepwise Model Selection
+
 - Principal Component Analysis
+
 - Lasso Regression
+
 - Random Forest
+
 - Gradient Boosting
+
 - Ensemble Learning
+
 - Model Evaluation and Final Analysis
 
 
@@ -55,13 +65,12 @@ The metric to evaluate the models is Root-Mean-Square-Error (RMSE) between the l
 
 # Our Data
 
-- Source
 
 Our data was obtained from [Ames Housing dataset](https://ww2.amstat.org/publications/jse/v19n3/decock.pdf), which was compiled by Dean De Cock for use in data science education. It's an incredible alternative for data scientists looking for a modernized and expanded version of the often cited Boston Housing dataset. The data includes 79 explanatory variables describing (almost) every aspect of residential homes. 
 
 We also participated in the Kaggle Competition [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) .Our best entry for the competition is 0.1169, which leads us to 367/2636 (top 15%) in the leaderboard!
 
-All the codes and procedures of this project can be found at [our full project repository](https://github.com/BST260-final-group-project)
+All the codes and procedures of this project can be found at [our full project repository.](https://github.com/BST260-final-group-project)
 
 ![](kaggle.png)
 
@@ -234,7 +243,7 @@ In our model, we can easily find that housing price realted a lot of factors, so
 
 ![](ball.png)
 
-- Basic Models
+- Model Evaluations
 
 
 We use 5-fold cross validation to evaluate how each model performs. Each model’s RMSEs in cross validation (CV) and in leaderboard (LB) are as follows:
